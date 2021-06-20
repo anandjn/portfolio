@@ -127,3 +127,13 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# virtualenv folders #
+#####################
+/portfolio-env
+
+
+# Hiding SECRET_KEY and DB credentials #
+#####################
+.env
+
