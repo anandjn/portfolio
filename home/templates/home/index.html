@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel = "stylesheet", type = "text/css", href = {% static "home/style.css"%}>
+        <title>Home</title>
+    </head>
+    <body>
+
+
+       <header>
+        <!-- Navigation (Sits on top) -->
+        <div class="w3-top w3-bar w3-padding w3-card w3-wide w3-light-grey w3-animate-top">
+                <div class = "w3-container">
+                    <a href="#" class = "w3-bar-item  w3-opacity" > {{user.greeting}}, <br> I'm <strong>{{user.name}}</strong> </a>
+                </div>
+            <!-- Right-sided navbar links. Hide them on small screens -->  
+            <div class = "w3-right w3-display-right w3-hide-small w3-container">
+                <a href="#" class="w3-bar-item w3-button">Resume</a>
+                <a href="#" class="w3-bar-item w3-button">Blog</a>
+                <a href="#" class="w3-bar-item w3-button">Projects</a>
+            </div>
+        </div>
+        <!-- NAVIGATION ENDS-->
+        </header>
+        
+        <!-- ABOUT -->
+        <section class = "w3-container w3-cell-row w3 w3-padding-top-32 w3-section" id ="about">
+            
+            <!-- INTRO CARD -->
+            <div class ="w3-container w3-cell w3-third w3-padding-large w3-animate-left w3-display-container">
+                <center>
+                    <img src = "{{user.picture.url}}", alt = "Profile picture" class = "w3-circle w3-image" style="width:35%">
+                </center>   
+                    <!-- Card text. Hide them on small screens -->  
+                    <div class ="w3-container w3-twothird w3-right w3-border-right w3-hide-small">
+
+                        <h4>{{user.greeting}}</h4>
+                        <h3>I'm {{user.name}}</h3>
+                        <h6>{{user.title}}</h6>
+                    </div>
+            </div>
+            <!-- INTRO CARD ENDS-->
+
+            <!-- CONTENT -->
+            <div class ="w3-container w3-cell w3-twothird w3-padding-large">
+                <h1 class="w3-center">About me</h1><br>
+                <p>{{user.para_1}}</p>
+                <p>{{user.para_2}}</p>
+                <p>{{user.para_3}}</p> 
+            </div>
+            <!-- CONTENT ENDS-->
+        
+        </section>
+
+        <!-- ABOUT ENDS -->
+        
+        <!-- SOCIAL -->
+        <section class = "w3-container w3-center w3-margin-top social" id = "social">
+            <a href = "#"> YT </a>
+            <a href = "#"> FB </a>
+            <a href = "#"> TW </a>
+            <a href = "#"> IN </a>
+            <a href = "#"> IG </a>
+        </section>
+        <!-- SOCIAL ENDS-->
+
+        
+    </body>
+</html>
